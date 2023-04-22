@@ -13,4 +13,10 @@ export class FoodService {
   getAll():Food[]{
     return sample_foods;
   }
+
+  getAllFoodsBySearchTerm(searchTerm:string){
+    //Este filtro ayudara a resolver el problema de una busqueda
+    // con mayusculas y minusculas
+    return this.getAll().filter(food => food.name.toLowerCase().includes(searchTerm.toLocaleLowerCase()))
+  }
 }
