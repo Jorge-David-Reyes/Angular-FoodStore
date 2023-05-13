@@ -1,0 +1,7 @@
+<!--html-->
+<div *ngIf="tags">
+    <!--ciclo para mostrar los tags-->
+    <a *ngFor="let tag of tags" routerLink="/tag/{{tag.name}}">
+      {{tag.name}}({{tag.count}})
+    </a>
+</div>

@@ -7,10 +7,13 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/partials/header/header.component';
 import { HomeComponent } from './components/pages/home/home.component';
 import { SearchComponent } from './components/partials/search/search.component';
+import { TagsComponent } from './components/partials/tags/tags.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'search/:searchTerm', component: HomeComponent },
+  //Esto va permitir tener un componente tag tipo (tag:fastfood)
+  { path:'tag/:tag', component: HomeComponent } 
 ];
 
 @NgModule({
@@ -18,7 +21,8 @@ const routes: Routes = [
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    SearchComponent
+    SearchComponent,
+    TagsComponent
   ],
   imports: [
     BrowserModule,
