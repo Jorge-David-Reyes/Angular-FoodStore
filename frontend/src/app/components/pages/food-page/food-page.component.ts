@@ -21,7 +21,10 @@ export class FoodPageComponent implements OnInit {
     //Implementamos la dinamica de activated route para id
     activatedRoute.params.subscribe((params) => {
       if(params.id)
-      this.food = foodService.getFoodById(params.id);
+      //this.food = foodService.getFoodById(params.id);
+      foodService.getFoodById(params.id).subscribe(serverFood => {
+        this.food = serverFood;
+      });
     })
    }
 
