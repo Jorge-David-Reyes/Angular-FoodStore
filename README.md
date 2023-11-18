@@ -1,4 +1,4 @@
-## Lessons
+## Secciones
 1. Introduction to the course
 2. Install development tools
 3. Create Angular App
